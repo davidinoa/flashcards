@@ -2,8 +2,11 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  response.send('Hello World!');
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
-app.listen(3002);
+const port = process.env.PORT || 3002;
+app.listen(port, () => {
+  console.log('The application is running on localhost:3002');
+});
