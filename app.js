@@ -15,6 +15,14 @@ app.get('/cards', (req, res) => {
   });
 });
 
+app.get('/hello', (req, res) => {
+  res.render('hello');
+});
+
+app.post('/hello', (req, res) => {
+  res.render('hello');
+});
+
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log('The application is running on localhost:3002');
