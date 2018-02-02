@@ -2,6 +2,16 @@ const express = require('express');
 
 const router = express.Router();
 
+// GET /register
+router.get('/register', (req, res, next) => {
+  return res.send('Register today!');
+});
+
+// POST /register
+router.post('/register', (req, res, next) => {
+  return res.send('User created!');
+});
+
 router.get('/', (req, res) => {
   const name = req.cookies.username;
   if (name) {
